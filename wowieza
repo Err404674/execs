@@ -1,0 +1,299 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local adinross = Instance.new("ScreenGui")
+local breakin2 = Instance.new("Frame")
+local execute = Instance.new("TextButton")
+local executeconsole = Instance.new("TextButton")
+local clear = Instance.new("TextButton")
+local thingy = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local minimize = Instance.new("TextButton")
+local executortab = Instance.new("TextButton")
+local consoletab = Instance.new("TextButton")
+local Executor = Instance.new("ScrollingFrame")
+local TextBox = Instance.new("TextBox")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local Console = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+
+-- Properties:
+
+adinross.Name = "adinross"
+adinross.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+breakin2.Name = "breakin2"
+breakin2.Parent = adinross
+breakin2.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+breakin2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+breakin2.BorderSizePixel = 0
+breakin2.Position = UDim2.new(0.174060881, 0, 0.243277848, 0)
+breakin2.Size = UDim2.new(0, 444, 0, 248)
+
+execute.Name = "execute"
+execute.Parent = breakin2
+execute.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+execute.BorderSizePixel = 0
+execute.Position = UDim2.new(-0.0018082133, 0, 0.917016089, 0)
+execute.Size = UDim2.new(0, 128, 0, 20)
+execute.Font = Enum.Font.Roboto
+execute.Text = "Execute"
+execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+execute.TextSize = 14.000
+
+executeconsole.Name = "executeconsole"
+executeconsole.Parent = breakin2
+executeconsole.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+executeconsole.BorderColor3 = Color3.fromRGB(0, 0, 0)
+executeconsole.BorderSizePixel = 0
+executeconsole.Position = UDim2.new(0.286480039, 0, 0.917016089, 0)
+executeconsole.Size = UDim2.new(0, 187, 0, 20)
+executeconsole.Font = Enum.Font.Roboto
+executeconsole.Text = "Execute & Console"
+executeconsole.TextColor3 = Color3.fromRGB(255, 255, 255)
+executeconsole.TextSize = 14.000
+
+clear.Name = "clear"
+clear.Parent = breakin2
+clear.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+clear.BorderSizePixel = 0
+clear.Position = UDim2.new(0.707651198, 0, 0.917016089, 0)
+clear.Size = UDim2.new(0, 130, 0, 20)
+clear.Font = Enum.Font.Roboto
+clear.Text = "Clear"
+clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+clear.TextSize = 14.000
+
+thingy.Name = "thingy"
+thingy.Parent = breakin2
+thingy.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+thingy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+thingy.BorderSizePixel = 0
+thingy.Position = UDim2.new(3.4289414e-08, 0, 0, 0)
+thingy.Size = UDim2.new(0, 443, 0, 18)
+
+TextLabel.Parent = thingy
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.0266393442, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 140, 0, 18)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Secret Service Panel"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+close.Name = "close"
+close.Parent = thingy
+close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+close.BackgroundTransparency = 1.000
+close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.942740262, 0, 0, 0)
+close.Size = UDim2.new(0, 27, 0, 18)
+close.Font = Enum.Font.Sarpanch
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 18.000
+
+minimize.Name = "minimize"
+minimize.Parent = thingy
+minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+minimize.BackgroundTransparency = 1.000
+minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+minimize.BorderSizePixel = 0
+minimize.Position = UDim2.new(0.887412429, 0, -0.5, 0)
+minimize.Size = UDim2.new(0, 27, 0, 26)
+minimize.Font = Enum.Font.SciFi
+minimize.Text = "_"
+minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+minimize.TextSize = 14.000
+
+executortab.Name = "executortab"
+executortab.Parent = breakin2
+executortab.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+executortab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+executortab.BorderSizePixel = 0
+executortab.Position = UDim2.new(0, 0, 0.0702418685, 0)
+executortab.Size = UDim2.new(0, 240, 0, 18)
+executortab.Font = Enum.Font.SourceSans
+executortab.Text = "Executor"
+executortab.TextColor3 = Color3.fromRGB(255, 255, 255)
+executortab.TextSize = 14.000
+
+consoletab.Name = "consoletab"
+consoletab.Parent = breakin2
+consoletab.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+consoletab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+consoletab.BorderSizePixel = 0
+consoletab.Position = UDim2.new(0.490797639, 0, 0.0702418685, 0)
+consoletab.Size = UDim2.new(0, 226, 0, 18)
+consoletab.Font = Enum.Font.SourceSans
+consoletab.Text = "Console"
+consoletab.TextColor3 = Color3.fromRGB(255, 255, 255)
+consoletab.TextSize = 14.000
+
+Executor.Name = "Executor"
+Executor.Parent = breakin2
+Executor.Active = true
+Executor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Executor.BackgroundTransparency = 1.000
+Executor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Executor.BorderSizePixel = 0
+Executor.Position = UDim2.new(0.0277374536, 0, 0.168539107, 0)
+Executor.Size = UDim2.new(0, 419, 0, 178)
+Executor.CanvasSize = UDim2.new(0, 0, 0, 2147483)
+Executor.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+Executor.ScrollBarThickness = 8
+
+TextBox.Parent = Executor
+TextBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextBox.BackgroundTransparency = 0.500
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Size = UDim2.new(0, 419, 0, 178)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSans
+TextBox.MultiLine = true
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint.Parent = TextBox
+UITextSizeConstraint.MaxTextSize = 14
+
+Console.Name = "Console"
+Console.Parent = breakin2
+Console.Active = true
+Console.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Console.BackgroundTransparency = 1.000
+Console.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Console.BorderSizePixel = 0
+Console.Position = UDim2.new(0.00514193717, 0, 0.142037675, 0)
+Console.Size = UDim2.new(0, 442, 0, 192)
+Console.Visible = false
+Console.CanvasSize = UDim2.new(0, 0, 0, 2147483)
+Console.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+
+UIGridLayout.Parent = Console
+UIGridLayout.FillDirection = Enum.FillDirection.Vertical
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 0, 0, 0)
+UIGridLayout.CellSize = UDim2.new(0, 300, 0, 300)
+
+-- Scripts:
+
+local function MYSQP_fake_script() -- clear.LocalScript 
+	local script = Instance.new('LocalScript', clear)
+
+	-- Script for clearing the text in a textbox when the text button is clicked
+	
+	local textButton = script.Parent
+	local textBox = script.Parent.Parent.Executor.TextBox
+	
+	local function clearText()
+		textBox.Text = ""
+	end
+	
+	textButton.MouseButton1Click:Connect(clearText)
+	
+end
+coroutine.wrap(MYSQP_fake_script)()
+local function PACOIYF_fake_script() -- executortab.LocalScript 
+	local script = Instance.new('LocalScript', executortab)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Console.Visible = false
+		script.Parent.Parent.Executor.Visible = true
+		wait(0.1)
+	end)
+end
+coroutine.wrap(PACOIYF_fake_script)()
+local function FVYNYQ_fake_script() -- consoletab.LocalScript 
+	local script = Instance.new('LocalScript', consoletab)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Console.Visible = true
+		script.Parent.Parent.Executor.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(FVYNYQ_fake_script)()
+local function TDPQG_fake_script() -- breakin2.Dragify 
+	local script = Instance.new('LocalScript', breakin2)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(TDPQG_fake_script)()
+local function APJDCI_fake_script() -- Console.LocalScript 
+	local script = Instance.new('LocalScript', Console)
+
+	local LogService = game:GetService("LogService")
+	function clr(text,x,y,z)
+		text.TextColor3 = Color3.fromRGB(x,y,z)
+	end
+	LogService.MessageOut:Connect(function(msg, ty)
+		if ty.Value ~= 0 then
+			Text = Instance.new('TextLabel', script.Parent)
+			Text.Text = tostring(msg)
+			Text.TextWrapped = true
+			Text.TextSize = 10
+			Text.BackgroundTransparency = 1
+		end
+		if ty == Enum.MessageType.MessageWarning then
+			clr(Text, 255, 197, 0)
+		elseif ty == Enum.MessageType.MessageError then
+			clr(Text, 206, 0, 0)
+		elseif ty.Value == 4 then
+			clr(Text, 255, 255, 255)
+		end
+	end)
+end
+coroutine.wrap(APJDCI_fake_script)()
