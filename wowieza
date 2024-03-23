@@ -188,11 +188,10 @@ UIGridLayout.Parent = Console
 UIGridLayout.FillDirection = Enum.FillDirection.Vertical
 UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout.CellPadding = UDim2.new(0, 0, 0, 0)
-UIGridLayout.CellSize = UDim2.new(0, 300, 0, 300)
 
 -- Scripts:
 
-local function MYSQP_fake_script() -- clear.LocalScript 
+local function NALLE_fake_script() -- clear.LocalScript 
 	local script = Instance.new('LocalScript', clear)
 
 	-- Script for clearing the text in a textbox when the text button is clicked
@@ -207,8 +206,8 @@ local function MYSQP_fake_script() -- clear.LocalScript
 	textButton.MouseButton1Click:Connect(clearText)
 	
 end
-coroutine.wrap(MYSQP_fake_script)()
-local function PACOIYF_fake_script() -- executortab.LocalScript 
+coroutine.wrap(NALLE_fake_script)()
+local function WNEDC_fake_script() -- executortab.LocalScript 
 	local script = Instance.new('LocalScript', executortab)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -217,8 +216,8 @@ local function PACOIYF_fake_script() -- executortab.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(PACOIYF_fake_script)()
-local function FVYNYQ_fake_script() -- consoletab.LocalScript 
+coroutine.wrap(WNEDC_fake_script)()
+local function AZESCTL_fake_script() -- consoletab.LocalScript 
 	local script = Instance.new('LocalScript', consoletab)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -227,8 +226,8 @@ local function FVYNYQ_fake_script() -- consoletab.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(FVYNYQ_fake_script)()
-local function TDPQG_fake_script() -- breakin2.Dragify 
+coroutine.wrap(AZESCTL_fake_script)()
+local function DLABI_fake_script() -- breakin2.Dragify 
 	local script = Instance.new('LocalScript', breakin2)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -271,8 +270,8 @@ local function TDPQG_fake_script() -- breakin2.Dragify
 		end
 	end)
 end
-coroutine.wrap(TDPQG_fake_script)()
-local function APJDCI_fake_script() -- Console.LocalScript 
+coroutine.wrap(DLABI_fake_script)()
+local function ODNOCDY_fake_script() -- Console.LocalScript 
 	local script = Instance.new('LocalScript', Console)
 
 	local LogService = game:GetService("LogService")
@@ -296,4 +295,4 @@ local function APJDCI_fake_script() -- Console.LocalScript
 		end
 	end)
 end
-coroutine.wrap(APJDCI_fake_script)()
+coroutine.wrap(ODNOCDY_fake_script)()
